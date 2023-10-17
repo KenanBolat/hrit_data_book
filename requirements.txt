@@ -1,0 +1,9 @@
+xarray
+numpy
+pandas
+netcdf4==1.6.2
+satpy
+matplotlib
+folium
+rasterio
+rioxarray
