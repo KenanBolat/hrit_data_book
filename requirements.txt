@@ -1,9 +1,15 @@
 xarray
+jupyter_contrib_nbextensions
 numpy
 pandas
 netcdf4==1.6.2
 satpy
 matplotlib
-folium
+xarray
 rasterio
-rioxarray
+cartopy
+geoviews
+ipyleaflet
+jsonschema[format]
+jsonschema[format-nongpl]
+xarray_leaflet

@@ -4,4 +4,4 @@ idea/*
 *.nc
 *.tif
 *.png
-
+venv/*
