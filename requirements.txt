@@ -13,3 +13,6 @@ ipyleaflet
 jsonschema[format]
 jsonschema[format-nongpl]
 xarray_leaflet
+traitlets==5.9.0
+notebook==6.4.12
+
