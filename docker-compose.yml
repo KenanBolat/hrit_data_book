@@ -19,4 +19,24 @@ services:
       - ./geoserver_data:/opt/geoserver_data
       - ./additional_libs:/opt/additional_libs # by mounting this we can install libs from host on startup
 
-
+  nifi:
+    image: apache/nifi:1.23.0
+    ports:
+      - 8081:8080
+    environment:
+      - NIFI_WEB_HTTP_PORT=8081
+  ftpd-server:
+    image: stilliard/pure-ftpd:hardened
+    ports:
+      - 21:21
+      - 30000-30009:30000-30009
+    volumes:
+      - ./ftp_data:/home/ftpusers/ftp
+    environment:
+      - PUBLICHOST=localhost
+      - FTP_USERS=knn:ftpgroup:1001:1001
+      - FTP_PASSIVE_PORTS=30000:30009
+      - ADDED_FLAGS=-d -d
+      - FTP_USER_NAME=knn
+      - FTP_USER_PASS=kalman
+      - FTP_USER_HOME=/home/ftpusers/ftp
