@@ -10,3 +10,6 @@ additional_fonts/*
 geoserver/additional_libs/*
 geoserver/additional_fonts/*
 geoserver/geoserver_data/*
+additional_libs/
+additional_fonts
+geoserver_data/*
